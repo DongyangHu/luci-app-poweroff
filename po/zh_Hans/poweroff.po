@@ -1,0 +1,35 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: ../../luasrc/view/poweroff.htm:20
+msgid "Device is shuting down ..."
+msgstr "设备关机中 ..."
+
+#: ../../luasrc/view/poweroff.htm:19
+msgid "Loading"
+msgstr "加载中"
+
+#: ../../luasrc/view/poweroff.htm:4
+msgid "Power Off Device"
+msgstr "关机"
+
+#: ../../luasrc/controller/poweroff.lua:5
+msgid "Poweroff"
+msgstr "关机"
+
+#: ../../luasrc/view/poweroff.htm:22
+msgid "Proceed"
+msgstr "执行关机"
+
+#: ../../luasrc/view/poweroff.htm:11
+msgid ""
+"WARNING: May cause a reboot on a device that does not support power off."
+msgstr "警告：在不支持关机的设备上，执行后可能会出现重启。"
+
+#: ../../luasrc/view/poweroff.htm:7
+msgid "Warning: There are unsaved changes that will get lost on poweroff!"
+msgstr "警告：存在未保存的更改，关机后会丢失！"
+
+#: ../../luasrc/view/poweroff.htm:25
+msgid "Warning: This device does not support powering off!"
+msgstr "警告：当前设备不支持关机！"

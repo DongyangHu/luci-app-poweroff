@@ -1,0 +1,39 @@
+<%+header%>
+
+    <h2 name="content">
+        <%:Power Off Device%>
+    </h2>
+    <%- local c = require("luci.model.uci").cursor():changes(); if c and next(c) then -%>
+	<p class="alert-message warning"><%:Warning: There are unsaved changes that will get lost on poweroff!%></p>
+    <%- end -%>
+
+    <hr />
+
+    <p class="alert-message warning">
+        <%:WARNING: May cause a reboot on a device that does not support power off.%>
+    </p>
+
+    <%- if nixio.fs.access("/sbin/poweroff") then -%>
+    <div class="cbi-page-actions left">
+        <p class="alert-message" style="display:none" id="showMessage">
+            <img src="<%=resource%>/icons/loading.gif" alt="<%:Loading%>" style="vertical-align:middle" />
+            <span><%:Device is shuting down ...%></span>
+        </p>
+        <input class="cbi-button cbi-button-reset important" type="button" value="<%:Proceed%>" onclick="poweroff(this)" />
+    </div>
+    <%- else -%>
+      <p class="alert-message warning"><%:Warning: This device does not support powering off!%></p>
+    <%- end -%> 
+
+<script type="text/javascript">
+    //<![CDATA[
+    function poweroff(btn) {
+        btn.style.display = 'none';
+        document.getElementById('showMessage').style.display = '';
+        (new XHR()).post("<%=REQUEST_URI%>/submit", { token: '<%=token%>' }, () => window.setInterval(() => window.location.href = window.location.origin + "<%=controller%>admin", 10000));
+    }
+    //]]>
+</script>
+
+
+<%+footer%>

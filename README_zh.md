@@ -5,7 +5,7 @@
 [README](README.md) | [中文文档](README_zh.md)
 
 ## 关于luci-app-poweroff
-- 这是一款 `OpenWrt` 中 `LuCI` 对`设备关机能力`提供支持的插件，允许用户进行设备关机。
+- 这是一款在 `OpenWrt` 中对`设备关机能力`提供支持的`Luci`插件，允许用户进行设备关机。
 - 基于 `OpenWrt` 源码编译，支持[Lede](https://github.com/coolsnowwolf/lede) / [官方OpenWrt](https://github.com/openwrt/openwrt)
 
 ## 快速使用

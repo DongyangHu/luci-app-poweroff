@@ -56,7 +56,7 @@ make package/feeds/luci/applications/luci-app-poweroff/compile V=99
 ```
 
 ## 许可
-OpenWrt is licensed under [Apache-2.0](#LISENCE)
+OpenWrt is licensed under [Apache-2.0](LICENSE)
 
 
 

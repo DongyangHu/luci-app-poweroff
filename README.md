@@ -5,8 +5,8 @@
 [README](README.md) | [中文文档](README_zh.md)
 
 ## What's luci-app-poweroff
-This is a Luci support for poweroff in OpenWrt, allow users to shut down their devices.
-Compile based on OpenWrt source code, support [Lede](https://github.com/coolsnowwolf/lede) / [Official OpenWrt](https://github.com/openwrt/openwrt)
+- This is a Luci support for poweroff in OpenWrt, allow users to shut down their devices.
+- Compile based on OpenWrt source code, support [Lede](https://github.com/coolsnowwolf/lede) / [Official OpenWrt](https://github.com/openwrt/openwrt)
 
 ## Quick Start
 ### Main Application

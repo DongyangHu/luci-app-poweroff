@@ -4,59 +4,58 @@
 
 [README](README.md) | [中文文档](README_zh.md)
 
-## 关于luci-app-poweroff
-这是一款 `OpenWrt` 中 `LuCI` 对`设备关机能力`提供支持的插件，允许用户进行设备关机。
-基于 `OpenWrt` 源码编译，支持[Lede](https://github.com/coolsnowwolf/lede)/[官方OpenWrt](https://github.com/openwrt/openwrt)
+## What's luci-app-poweroff
+This is a Luci support for poweroff in OpenWrt, allow users to shut down their devices.
+Compile based on OpenWrt source code, support [Lede](https://github.com/coolsnowwolf/lede)/[Official OpenWrt](https://github.com/openwrt/openwrt)
 
-## 快速使用
-### 主程序
-- 从[Release](https://github.com/DongyangHu/luci-app-poweroff/releases)下载`luci-app-poweroff_xxx.ipk`包
-- 上传ipk包至路由器
-- 使用opkg安装
+## Quick Start
+### Main Application
+- Download the package what name is `luci-app-poweroff_xxx.ipk` from [Release](https://github.com/DongyangHu/luci-app-poweroff/releases)
+- Upload the `ipk` package to your router
+- Install `ipk` package use `opkg install` command
 ```
 opkg install luci-app-poweroff_*.ipk
 ```
 
-### 多语言
-提供中文语言包
-- 若需要中文语言包，从[Release](https://github.com/DongyangHu/luci-app-poweroff/releases)下载`luci-i18n-poweroff-zh-cn_xxx.ipk`包，上传至路由器安装
-- 上传ipk包至路由器
-- 使用opkg安装
+### I18n
+There is a Chinese language pack provided
+- If you need, please Download the package what name is `luci-i18n-poweroff-zh-cn_xxx.ipk` from [Release](https://github.com/DongyangHu/luci-app-poweroff/releases)
+- Upload the `ipk` package to your router
+- Install `ipk` package use `opkg install` command
 ```
 opkg install luci-i18n-poweroff-zh-cn_*.ipk
 ```
 
-## 编译
-从[OpenWrt](https://github.com/openwrt/openwrt)源码编译
-### 下载OpenWrt源码
+## Compile
+Compile based on [OpenWrt](https://github.com/openwrt/openwrt) source code
+### Download Source Code Of OpenWrt
 ```
 git clone https://github.com/openwrt/openwrt.git
 ```
-### 更新feed
+### Update Feeds
 ```
-# 在OpenWrt根目录执行
+# Execute it in OpenWrt root directory
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 ```
 
-### 同步项目源码
+### Sync Source Code For Project
 ```
-# 在OpenWrt根目录执行
+# Execute it in OpenWrt root directory
 cd ./package/feeds/luci/applications
 git clone https://github.com/DongyangHu/luci-app-poweroff.git
 ```
 
-
-### 编译
+### Do Compile
 ```
-# 在OpenWrt根目录执行
+# Execute it in OpenWrt root directory
 make menuconfig
-# 选择要编译的包 LuCI -> Applications -> luci-app-poweroff
+# Select the package to be compiled. LuCI -> Applications -> luci-app-poweroff
 make package/feeds/luci/applications/luci-app-poweroff/compile V=99
 ```
 
-## 许可
-OpenWrt is licensed under [Apache-2.0](LICENSE)
+## LICENSE
+[luci-app-poweroff](https://github.com/DongyangHu/luci-app-poweroff) is licensed under [Apache-2.0](LICENSE)
 
 
 
